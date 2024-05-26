@@ -14,8 +14,11 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-#STATIC_DIR = BASE_DIR/'static'
-#STATIC_ROOT = BASE_DIR/'static'
+
+#LOGIN_URL = "login"
+LOGIN_REDIRECT_URL = "home"
+SIMPLE_BACKEND_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "login"
 
 
 # Quick-start development settings - unsuitable for production
@@ -57,7 +60,7 @@ ROOT_URLCONF = 'tutorme1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/"templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

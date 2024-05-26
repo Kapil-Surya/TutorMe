@@ -37,7 +37,7 @@
 
       <div class="profile">
          <img src="{% static 'images/pic-1.jpg' %}" class="image" alt="">
-         <h3 class="name">Sneha S</h3>
+         <h3 class="name">{{request.user.username}}</h3>
          <a href="{% url 'profile' %}" class="btn">view profile</a>
       </div>
    
@@ -60,7 +60,7 @@
             <div class="tutor">
                <img src="{% static 'images/pic-2.jpg' %}" alt="">
                <div class="info">
-                  <h3>Sneha</h3>
+                  <h3>Sneha Subbarayudu</h3>
                   <span>21-10-2022</span>
                </div>
             </div>
@@ -68,7 +68,7 @@
                <img src="{% static 'images/thumb-1.png' %}" alt="">
                <span>10 videos</span>
             </div>
-            <h3 class="title">complete HTML tutorial</h3>
+            <h3 class="title">HTML tutorial</h3>
             <a href="" class="inline-btn">view playlist</a>
          </div>
    
@@ -76,7 +76,7 @@
             <div class="tutor">
                <img src="{% static 'images/pic-3.jpg' %}" alt="">
                <div class="info">
-                  <h3>Kapil</h3>
+                  <h3>Kapil Surya</h3>
                   <span>21-10-2022</span>
                </div>
             </div>
@@ -84,7 +84,7 @@
                <img src="{% static 'images/thumb-2.png' %}" alt="">
                <span>10 videos</span>
             </div>
-            <h3 class="title">complete CSS tutorial</h3>
+            <h3 class="title">CSS and JS tutorial</h3>
             <a href="" class="inline-btn">view playlist</a>
          </div>
    
@@ -92,7 +92,7 @@
             <div class="tutor">
                <img src="{% static 'images/pic-4.jpg' %}" alt="">
                <div class="info">
-                  <h3>Samaya</h3>
+                  <h3>Samaya Argula</h3>
                   <span>21-10-2022</span>
                </div>
             </div>
@@ -100,41 +100,11 @@
                <img src="{% static 'images/thumb-3.png' %}" alt="">
                <span>10 videos</span>
             </div>
-            <h3 class="title">complete JS tutorial</h3>
+            <h3 class="title">Java tutorial</h3>
             <a href="" class="inline-btn">view playlist</a>
          </div>
    
-         <div class="box">
-            <div class="tutor">
-               <img src="{% static 'images/pic-5.jpg' %}" alt="">
-               <div class="info">
-                  <h3>Sneha</h3>
-                  <span>21-10-2022</span>
-               </div>
-            </div>
-            <div class="thumb">
-               <img src="{% static 'images/thumb-4.png' %}" alt="">
-               <span>10 videos</span>
-            </div>
-            <h3 class="title">complete Boostrap tutorial</h3>
-            <a href="" class="inline-btn">view playlist</a>
-         </div>
-   
-         <div class="box">
-            <div class="tutor">
-               <img src="{% static 'images/pic-6.jpg' %}" alt="">
-               <div class="info">
-                  <h3>Sneha</h3>
-                  <span>21-10-2022</span>
-               </div>
-            </div>
-            <div class="thumb">
-               <img src="{% static 'images/thumb-5.png' %}" alt="">
-               <span>10 videos</span>
-            </div>
-            <h3 class="title">complete JQuery tutorial</h3>
-            <a href="" class="inline-btn">view playlist</a>
-         </div>
+         
    </section>
 
 

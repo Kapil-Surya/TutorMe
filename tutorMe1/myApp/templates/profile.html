@@ -36,7 +36,7 @@
 
       <div class="profile">
          <img src="{% static 'images/pic-1.jpg'%}" class="image" alt="">
-         <h3 class="name">Sneha S</h3>
+         <h3 class="name">{{request.user.username}}</h3>
          <a href="{% url 'profile' %}" class="btn">view profile</a>
       </div>
    
@@ -58,7 +58,7 @@
 
       <div class="user">
          <img src="{% static 'images/pic-1.jpg' %}" alt="">
-         <h3>Sneha S</h3>
+         <h3>{{request.user.username}}</h3>
          <p>student</p>
          <a href="{% url 'update' %}" class="inline-btn">update profile</a>
       </div>

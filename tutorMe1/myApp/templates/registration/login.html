@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>login</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+
+   <header class="header"> 
+   
+      <section class="flex">
+   
+         <img src="{% static 'images/logo1.png' %}" style="height: 60px; width: 95px; margin-left: 450px;">
+         <a class = "inline-btn" href="{% url 'register' %}">Register</a>
+         <!-- <form action="search.html" method="post" class="search-form">
+            <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+            <button type="submit" class="fas fa-search"></button>
+         </form> -->
+         </div>
+   
+      </section>
+   
+   </header>   
+
+   <div class="side-bar">
+
+
+      <div class="profile">
+         <img src="{% static 'images/pic-1.jpg' %}" class="image" alt="">
+         <h3 class="name">{{request.user.username}}</h3>
+         <a href="{% url 'profile' %}" class="btn">view profile</a>
+      </div>
+   
+      <nav class="navbar">
+         <a href="{% url 'home' %}"><i class="fas fa-home"></i><span>Home</span></a>
+         <a href="{% url 'courses' %}"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+         <a href="{% url 'helper' %}"><i class="fas fa-headset"></i><span>Helper</span></a>
+         <a href="{% url 'about' %}"><i class="fas fa-question"></i><span>About</span></a>
+      </nav>
+   
+   </div>
+
+
+<section class="form-container">
+
+   <form action="{% url 'login' %}" name = "LoginForm" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h3>login now</h3>
+      <p>your email <span>*</span></p>
+      <input type="username" id="id_username" name="username" placeholder="enter your username" required maxlength="50" class="box">
+      <p>your password <span>*</span></p>
+      <input type="password" id="id_password" name="password"  placeholder="enter your password" required maxlength="20" class="box">
+      <input type="submit" value="login new" name="submit" class="btn">
+   </form>
+
+</section>
+
+
+
+<!-- custom js file link  -->
+<script src="{% static 'js/script.js' %}"></script>
+
+   
+</body>
+</html>

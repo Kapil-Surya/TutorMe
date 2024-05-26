@@ -37,7 +37,7 @@
 
       <div class="profile">
          <img src="{% static 'images/pic-1.jpg' %}" class="image" alt="">
-         <h3 class="name">Sneha S</h3>
+         <h3 class="name">{{request.user.username}}</h3>
          <a href="{% url 'profile' %}" class="btn">view profile</a>
       </div>
    
@@ -81,7 +81,7 @@
             <span>10 videos</span>
          </div>
          <h3 class="title">complete HTML tutorial</h3>
-         <a href="{% url 'playlist' %}" class="inline-btn">view playlist</a>
+         
       </div>
 
       <div class="box">
@@ -90,7 +90,7 @@
             <span>10 videos</span>
          </div>
          <h3 class="title">complete CSS tutorial</h3>
-         <a href="{% url 'playlist' %}" class="inline-btn">view playlist</a>
+        
       </div>
 
       <div class="box">
@@ -99,7 +99,7 @@
             <span>10 videos</span>
          </div>
          <h3 class="title">complete javascript tutorial</h3>
-         <a href="{% url 'playlist' %}" class="inline-btn">view playlist</a>
+         
       </div>
 
       <div class="box">
@@ -108,7 +108,7 @@
             <span>10 videos</span>
          </div>
          <h3 class="title">complete Boostrap tutorial</h3>
-         <a href="{% url 'playlist' %}" class="inline-btn">view playlist</a>
+        
       </div>
 
    </div>
